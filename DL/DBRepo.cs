@@ -296,6 +296,7 @@ public class DBRepo : IRepo
                 dataAdapter.InsertCommand = cmdBuilder.GetInsertCommand();
 
                 dataAdapter.Update(restoTable);
+                 Log.Information("A new Customer has been added with Name: {Name}, Username: {Username}, Password: {Password}",CustomerToAdd.Name, CustomerToAdd.Username, CustomerToAdd.Password);
             }
         }
     }
@@ -333,6 +334,7 @@ public class DBRepo : IRepo
                 dataAdapter.InsertCommand = cmdBuilder.GetInsertCommand();
 
                 dataAdapter.Update(restoTable);
+                    Log.Information("A new Storefront has been added with Location: {Location}, State: {State}, City: {City}",StorefrontToAdd.Location, StorefrontToAdd.State, StorefrontToAdd.City);
             }
         }
     }
